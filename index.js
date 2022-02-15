@@ -31,8 +31,6 @@ async function sentWhatsAppMessage(msg)
 
 async function sendquote()
 {
-
-
 var options = {
   method: 'GET',
   url: 'https://world-of-quotes.p.rapidapi.com/v1/quotes/quote-of-the-day',
@@ -57,7 +55,6 @@ app.get('/',async (req,res)=>
 {
   try 
   {
-  await sendquote();
   if(lastMessage.sid)
 {
   lastMessage.txt = lastMessage.txt.replace("\n",'<br />'); 
@@ -69,14 +66,14 @@ res.send('<div style="text-align:center;margin-top:25vw;font-family: Arial, Helv
 }
 catch(error)
 {
-  console.log(error);
+console.log(error);
 res.status(500).send("Some error occured, please check back later");
 }
 });
 
 
-// setTimeout(async ()=>{
-//  await sendquote();
-//  },18000000);//every 5 hours
+setInterval(async ()=>{
+await sendquote();
+},18000000);//every 5 hours
 
 app.listen(PORT,()=>{console.log(`Server Listening On Port ${PORT}`)});
