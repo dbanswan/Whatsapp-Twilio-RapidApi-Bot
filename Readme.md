@@ -1,4 +1,4 @@
-# Inspiration Quotes Whatsapp Bot Using Twilio & Rapid API
+# Inspirational Quotes Whatsapp Bot Using Twilio & Rapid API
 
 Live On Heroku: [https://twilio-whapp-bot.herokuapp.com/](https://twilio-whapp-bot.herokuapp.com/)
 
