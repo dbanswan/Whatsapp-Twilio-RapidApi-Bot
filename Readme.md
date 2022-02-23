@@ -30,4 +30,8 @@ NODE_ENV=production
 ![Web Screenshot](docs/images/phone.jpg?raw=true)
 
 
+## CAUTION
+Please note this was delployed to heroku which shuts down your app after 30 mins of inactivity, which means the 5 hour interval will not work unless we keep sending requests to your deployed to keep it alive. Also Twilio free tier wants you to do revalidate your sandbox after 72 hours which means you will have to do this extra step again and again. ***Best*** way will be deploy node js code to some other cloud solution, like digital ocean droplet and put some minimal money in your twilio account to get rid of all these restrictions.
+
+
 You can club this bot code with any seperate api or your custom solution. [RapidApi.com](RapidApi.com) has a great collection of amazing api endpoints.
